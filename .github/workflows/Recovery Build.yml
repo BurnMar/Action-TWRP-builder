@@ -1,10 +1,10 @@
-name: ¹¹½¨ Recovery
+name: æž„å»º Recovery
 
 on:
   workflow_dispatch:
     inputs:
       MANIFEST_URL:
-        description: 'MANIFEST_URL (Èç¹ûÏëÊ¹ÓÃSSHÃÜÔ¿£¬ÇëÊ¹ÓÃ git@github.com:XXXXX)£¬°²×¿10ÒÔÉÏÉè±¸Ê÷£ºhttps://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp'
+        description: 'MANIFEST_URL (å¦‚æžœæƒ³ä½¿ç”¨SSHå¯†é’¥ï¼Œè¯·ä½¿ç”¨ git@github.com:XXXXX)ï¼Œå®‰å“10ä»¥ä¸Šè®¾å¤‡æ ‘ï¼šhttps://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp'
         required: true
         default: 'https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni'
       MANIFEST_BRANCH:
@@ -24,10 +24,10 @@ on:
         required: true
         default: 'device/gionee/GIONEE_BBL7516A'
       COMMON_TREE_URL:
-        description: 'COMMON_TREE_URL (Èç¹ûÃ»ÓÐÍ¨ÓÃÉè±¸Ê÷£¬ÇëÁô¿Õ)'
+        description: 'COMMON_TREE_URL (å¦‚æžœæ²¡æœ‰é€šç”¨è®¾å¤‡æ ‘ï¼Œè¯·ç•™ç©º)'
         required: false
       COMMON_PATH:
-        description: 'COMMON_PATH (Èç¹ûÃ»ÓÐÍ¨ÓÃÉè±¸Ê÷£¬ÇëÁô¿Õ)'
+        description: 'COMMON_PATH (å¦‚æžœæ²¡æœ‰é€šç”¨è®¾å¤‡æ ‘ï¼Œè¯·ç•™ç©º)'
         required: false
       DEVICE_NAME:
         description: 'DEVICE_NAME'
@@ -101,8 +101,8 @@ jobs:
         mkdir workspace
         cd workspace
         echo "workspace-folder=$(pwd)" >> $GITHUB_OUTPUT
-        git config --global user.name "Nico170420"
-        git config --global user.email "b170420nc@gmail.com"
+        git config --global user.name "BurnMar"
+        git config --global user.email "BurnMar996@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
       id: pwd
           
